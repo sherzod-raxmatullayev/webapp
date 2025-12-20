@@ -171,15 +171,19 @@ body {
 .free .container {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  gap: 10px;
+  width: 95%;
+  gap: 5px;
 }
 .free__title {
+  width: 100%;
   font-family: Roboto;
   font-weight: 600;
   font-size: 25px;
   color: #e5e5e5;
   height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .free__boxs {
   width: 100%;
@@ -188,10 +192,10 @@ body {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 10px;
 }
 .free__box {
-  width: 32%;
+  width: 30%;
 }
 .free__box:hover {
   transition: all 0.3s;
@@ -200,7 +204,7 @@ body {
 .free__but {
   font-family: sans-serif;
   font-size: 16px;
-  padding-left: 35%;
+  text-align: end;
   color: rgb(74, 74, 144);
 }
 .free__box img {
