@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asosiy sahifa</title>
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <a href=" ">
+                    <p class="logotip"><span class="header__fox">Fox </span><span class="header__tv">tv</span></p>
+                </a>
+                <div class="header__buttons">
+
+                    <a href="#"><img src="./asstes/icons/live.svg" alt="" class="header__live"></a>
+                    <a href="#"><img src="./asstes/icons/Search.svg" alt="" class="header__search"></a>
+
+
+                </div>
+            </div>
+        </header>
+
+        <section class="banner" style="background-image: url(./asstes/imgs/test.png);background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;width: 100%;
+    height: 559px;display: flex;
+    flex-direction: column;
+    justify-content: flex-end;">
+            <div class="container">
+                <div class="banner__catigoria">
+                    <p class="banner__items">Action</p>
+                    <p class="banner__items">Drama</p>
+                    <p class="banner__items">Adventure</p>
+                    <p class="banner__items">Thriller</p>
+                </div>
+                <div class="banner__menu">
+                    <a href="#">
+                        <div class="banner__list">
+                            <img src="./asstes/icons/Plus Math.svg" alt="">
+                            <p class="banner__text">Saqlash</p>
+                        </div>
+                    </a>
+                    <div class="banner__button"><a href="#"><button>Ko'rish</button></a></div>
+
+                    <a href="#"><div class="banner__info">
+                        <img src="./asstes/icons/Info.svg" alt="">
+                        <p class="banner__text">Ma'lumot</p>
+                    </div></a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="free">
+            <div class="container">
+                <h1 class="free__title">Top animelar <a class="free__but" href="#">Barchasi -></a></h1>
+                <div class="free__boxs">
+
+
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    
+
+
+                </div>
+            </div>
+        </section>
+        <div class="fake_footer" style="width: 100%; height: 80px;"></div>
+        <footer class="footer">
+            <div class="container">
+                <a href="#"><img src="./asstes/icons/Home.svg" alt="" class="footer__items"></a>
+                <a href="#"><img src="./asstes/icons/Bookmark.svg" alt="" class="footer__items"></a>
+                <a href="#"><img src="./asstes/icons/Book Stack.svg" alt="" class="footer__items"></a>
+                <a href="#"><img src="./asstes/icons/Male User.svg" alt="" class="footer__items"></a>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.footer__items');
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

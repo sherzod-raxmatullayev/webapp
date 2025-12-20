@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+
+
+
+
+
+
+
+.header {
+    width: 100%;
+    height: 150px;
+    @include center(row);
+    position: fixed;
+    
+
+
+
+    & .container {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        align-items: center;
+        background: rgba(111, 113, 114, 0);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.9px);
+        -webkit-backdrop-filter: blur(4.9px);
+        border: 1px solid rgba(111, 113, 114, 0.66);
+
+
+        position: fixed;
+        top: 20px;
+
+
+
+    }
+
+
+    &__fox {
+        font-family: Roboto;
+        font-size: 36px;
+        color: rgb(251, 164, 2);
+        font-weight: 800;
+        text-shadow: 8px 9px 11px rgba(251, 164, 2, 1);
+    }
+
+    &__tv {
+        font-family: Roboto;
+        font-size: 20px;
+        color: rgb(202, 231, 12);
+        font-weight: 800;
+        text-shadow: 8px 9px 11px rgb(202, 231, 12);
+    }
+
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+}

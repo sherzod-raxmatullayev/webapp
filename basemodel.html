@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asosiy sahifa</title>
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <a href=" ">
+                    <p class="logotip"><span class="header__fox">Fox </span><span class="header__tv">tv</span></p>
+                </a>
+                <div class="header__buttons">
+
+                    <a href="#"><img src="./asstes/icons/live.svg" alt="" class="header__live"></a>
+                    <a href="#"><img src="./asstes/icons/Search.svg" alt="" class="header__search"></a>
+
+
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <footer class="footer">
+            <div class="container">
+                <a href="#"><img src="./asstes/icons/Home.svg" alt="" class="footer__items"></a>
+                <a href="#"><img src="./asstes/icons/Bookmark.svg" alt="" class="footer__items"></a>
+                <a href="#"><img src="./asstes/icons/Book Stack.svg" alt="" class="footer__items"></a>
+                <a href="#"><img src="./asstes/icons/Male User.svg" alt="" class="footer__items"></a>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.footer__items');
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

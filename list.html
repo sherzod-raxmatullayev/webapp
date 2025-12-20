@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asosiy sahifa</title>
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        
+
+        <header class="search">
+            <div class="container">
+                <p class="search__title">Saqlanganlar</p>
+                <a href="#"><img class="search__icon" src="./asstes/icons/Search.svg" alt=""></a>
+            </div>
+        </header>
+
+
+        <section class="praducts">
+            <div class="container">
+
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+                <div class="praducts__items">
+                    <img src="./asstes/imgs/test.png" alt="" class="praducts__img">
+                    <div class="praducts__info">
+                        <p class="praducts__title">Attack On Titan</p>
+
+                        <img src="./asstes/icons/play-button.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="fake_footer" style="width: 100%; height: 80px;"></div>
+        <footer class="footer">
+            <div class="container">
+                <a href="#"><img src="./asstes/icons/Home.svg" alt="" class="footer__items"></a>
+                <a href="#"><img src="./asstes/icons/Bookmark.svg" alt="" class="footer__items"></a>
+                <a href="#"><img src="./asstes/icons/Book Stack.svg" alt="" class="footer__items"></a>
+                <a href="#"><img src="./asstes/icons/Male User.svg" alt="" class="footer__items"></a>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.footer__items');
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

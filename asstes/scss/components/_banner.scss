@@ -1,0 +1,69 @@
+.banner {
+    width: 100%;
+    height: 559px;
+
+
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__catigoria {
+        width: 100%;
+        height: 26px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    &__menu {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background: linear-gradient(0deg, #18132b 0%, rgba(0, 0, 0, 0) 100%);
+        transform: rotate(0deg);
+
+    }
+
+    &__text {
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 15px;
+        color: #e5e5e5;
+    }
+
+    &__list,
+    &__info {
+        @include center(column);
+        width: 50px;
+    }
+
+    &__items {
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        color: #e5e5e5;
+
+    }
+
+    &__button button {
+        border: 1px solid #765b80;
+        border-radius: 20px;
+        width: 126px;
+        height: 51px;
+        background: rgb(99, 89, 133);
+
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 20px;
+        color: #e5e5e5;
+
+    }
+
+}
