@@ -138,40 +138,33 @@
     </div>
 
     <script>
+        const debug = document.createElement("div");
+        debug.style.cssText = `
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    max-height:40%;
+    overflow:auto;
+    background:#000;
+    color:#0f0;
+    font-size:12px;
+    z-index:9999;
+    padding:8px;
+`;
 
-        if (window.Telegram && Telegram.WebApp) {
-            const tg = Telegram.WebApp;
+        document.body.appendChild(debug);
 
-            console.group("📱 Telegram WebApp Info");
-
-            console.log("🟢 Platform:", tg.platform);
-            console.log("🌐 Version:", tg.version);
-            console.log("🎨 Color Scheme:", tg.colorScheme);
-            console.log("📏 Viewport Height:", tg.viewportHeight);
-            console.log("📐 Viewport Stable Height:", tg.viewportStableHeight);
-            console.log("🔘 Is Expanded:", tg.isExpanded);
-
-            console.group("👤 User Info");
-            console.log(tg.initDataUnsafe?.user || "User yo‘q");
-            console.groupEnd();
-
-            console.group("💬 Chat Info");
-            console.log(tg.initDataUnsafe?.chat || "Chat yo‘q");
-            console.groupEnd();
-
-            console.group("📦 Init Data Unsafe (HAMMASI)");
-            console.log(tg.initDataUnsafe);
-            console.groupEnd();
-
-            console.group("🔐 Init Data (raw, signed)");
-            console.log(tg.initData);
-            console.groupEnd();
-
-            console.groupEnd();
-
-        } else {
-            console.warn("❌ Telegram WebApp emas, oddiy browser");
+        function log(msg) {
+            debug.innerText +=
+                (typeof msg === "object"
+                    ? JSON.stringify(msg, null, 2)
+                    : msg) + "\n\n";
         }
+
+        log("Telegram WebApp Debug");
+        log(Telegram.WebApp.initDataUnsafe);
+
 
         const items = document.querySelectorAll('.footer__items');
 
