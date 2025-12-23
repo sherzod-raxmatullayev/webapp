@@ -38,29 +38,13 @@
     </div>
 
     <script src="https://telegram.org/js/telegram-web-app.js">
-        // Initialize the Telegram WebApp object
         const tg = window.Telegram.WebApp;
-
-        // It's good practice to call ready() once the app is loaded
         tg.ready();
 
-        // Access the user information
-        const user = tg.initDataUnsafe.user;
-
-        if (user) {
-            console.log("User ID:", user.id);
-            console.log("First Name:", user.first_name);
-            console.log("Last Name:", user.last_name);
-            console.log("Username:", user.username);
-            console.log("Language Code:", user.language_code);
-            console.log("Is Premium:", user.is_premium);
-            console.log("Photo URL:", user.photo_url);
-
-            // You can display this information in your UI
-            document.getElementById('info').innerText =
-                `Welcome, ${user.first_name}! Your User ID is ${user.id}.`;
+        if (tg.initDataUnsafe) {
+            console.log("Full JSON:", JSON.stringify(tg.initDataUnsafe));
         } else {
-            console.log("User info not available in initDataUnsafe.");
+            console.log("Data not available, open inside Telegram Web App.");
         }
 
 
