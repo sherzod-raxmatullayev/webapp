@@ -47,12 +47,10 @@
                     </a>
                     <div class="banner__button"><a href="#"><button>Ko'rish</button></a></div>
 
-                    <a href="#">
-                        <div class="banner__info">
-                            <img src="./asstes/icons/Info.svg" alt="">
-                            <p class="banner__text">Ma'lumot</p>
-                        </div>
-                    </a>
+                    <a href="#"><div class="banner__info">
+                        <img src="./asstes/icons/Info.svg" alt="">
+                        <p class="banner__text">Ma'lumot</p>
+                    </div></a>
 
                 </div>
             </div>
@@ -64,61 +62,43 @@
                 <div class="free__boxs">
 
 
-                    <a href="#">
-                        <div class="free__box">
-                            <img src="./asstes/imgs/anime.png" alt="">
-                            <p class="free__anime-title">Blech</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="free__box">
-                            <img src="./asstes/imgs/anime.png" alt="">
-                            <p class="free__anime-title">Blech</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="free__box">
-                            <img src="./asstes/imgs/anime.png" alt="">
-                            <p class="free__anime-title">Blech</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="free__box">
-                            <img src="./asstes/imgs/anime.png" alt="">
-                            <p class="free__anime-title">Blech</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="free__box">
-                            <img src="./asstes/imgs/anime.png" alt="">
-                            <p class="free__anime-title">Blech</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="free__box">
-                            <img src="./asstes/imgs/anime.png" alt="">
-                            <p class="free__anime-title">Blech</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="free__box">
-                            <img src="./asstes/imgs/anime.png" alt="">
-                            <p class="free__anime-title">Blech</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="free__box">
-                            <img src="./asstes/imgs/anime.png" alt="">
-                            <p class="free__anime-title">Blech</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="free__box">
-                            <img src="./asstes/imgs/anime.png" alt="">
-                            <p class="free__anime-title">Blech</p>
-                        </div>
-                    </a>
-
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    <a href="#"><div class="free__box">
+                        <img src="./asstes/imgs/anime.png" alt="">
+                        <p class="free__anime-title">Blech</p>
+                    </div></a>
+                    
 
 
                 </div>
@@ -138,34 +118,6 @@
     </div>
 
     <script>
-        const debug = document.createElement("div");
-        debug.style.cssText = `
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    max-height:40%;
-    overflow:auto;
-    background:#000;
-    color:#0f0;
-    font-size:12px;
-    z-index:9999;
-    padding:8px;
-`;
-
-        document.body.appendChild(debug);
-
-        function log(msg) {
-            debug.innerText +=
-                (typeof msg === "object"
-                    ? JSON.stringify(msg, null, 2)
-                    : msg) + "\n\n";
-        }
-
-        log("Telegram WebApp Debug");
-        log(Telegram.WebApp.initDataUnsafe);
-
-
         const items = document.querySelectorAll('.footer__items');
 
         items.forEach(item => {

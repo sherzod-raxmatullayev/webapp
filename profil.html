@@ -10,12 +10,14 @@
 
 <body>
     <br><br>
-    <h1 class="profil__title">Profil</h1>   
+    <h1 class="profil__title">Profil</h1>
     <header class="profil">
         <div class="container">
             <div class="profil__imgd"><img src="./asstes/imgs/test.png" alt="" class="profil__img"></div>
         </div>
     </header>
+
+    <p class="info"></p>
 
 
 
@@ -24,19 +26,36 @@
 
     <div class="fake_footer" style="width: 100%; height: 80px;"></div>
     <footer class="footer">
-            <div class="container">
-                <a href="./index.html"><img src="./asstes/icons/Home.svg" alt="" class="footer__items"></a>
-                <a href="./list.html"><img src="./asstes/icons/Bookmark.svg" alt="" class="footer__items"></a>
-                <a href="./browse.html"><img src="./asstes/icons/Book Stack.svg" alt="" class="footer__items"></a>
-                <a href="./profil.html"><img src="./asstes/icons/Male User.svg" alt="" class="footer__items"></a>
+        <div class="container">
+            <a href="./index.html"><img src="./asstes/icons/Home.svg" alt="" class="footer__items"></a>
+            <a href="./list.html"><img src="./asstes/icons/Bookmark.svg" alt="" class="footer__items"></a>
+            <a href="./browse.html"><img src="./asstes/icons/Book Stack.svg" alt="" class="footer__items"></a>
+            <a href="./profil.html"><img src="./asstes/icons/Male User.svg" alt="" class="footer__items"></a>
 
-            </div>
-        </footer>
+        </div>
+    </footer>
 
     </div>
 
-    <script>
+    <script src="https://telegram.org/js/telegram-web-app.js">
+        const tg = window.Telegram.WebApp;
         const items = document.querySelectorAll('.footer__items');
+        const user = tg.initDataUnsafe.user;
+        const info = document.getElementById("info");
+
+        if (tg.initDataUnsafe.user) {
+            const u = tg.initDataUnsafe.user;
+
+            info.innerHTML = `
+    <p>ID: ${u.id}</p>
+    <p>Ism: ${u.first_name}</p>
+    <p>Username: @${u.username}</p>
+    <img src="${u.photo_url}" width="100">
+  `;
+        } else {
+            info.innerText = "Telegram WebApp emas";
+        }
+
 
         items.forEach(item => {
             item.addEventListener('click', () => {
