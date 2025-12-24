@@ -58,7 +58,7 @@
             console.log("Full JSON:", JSON.stringify(tg.initDataUnsafe));
             const user = tg.initDataUnsafe.user;
             const fullName = `${user.first_name || ""} ${user.last_name || ""}`.trim();
-            document.getElementById("nameid").textContent = fullName;
+            document.getElementById("name").textContent = fullName;
         } else {
             console.log("Data not available, open inside Telegram Web App.");
         }
