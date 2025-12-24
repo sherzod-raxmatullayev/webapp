@@ -53,6 +53,7 @@
     <script >
         const tg = window.Telegram.WebApp;
         tg.ready();
+        if (user.photo_url) { document.getElementById("profilImg").src = user.photo_url; }
 
         if (tg.initDataUnsafe) {
             console.log("Full JSON:", JSON.stringify(tg.initDataUnsafe));
