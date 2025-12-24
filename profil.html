@@ -50,27 +50,25 @@
 
     </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script >
-        const tg = window.Telegram.WebApp;
-        tg.ready();
-        if (user.photo_url) { document.getElementById("profilImg").src = user.photo_url; }
-
-        if (tg.initDataUnsafe) {
-            console.log("Full JSON:", JSON.stringify(tg.initDataUnsafe));
-            const user = tg.initDataUnsafe.user;
-            const fullName = `${user.first_name || ""} ${user.last_name || ""}`.trim();
-            document.getElementById("name").textContent = fullName;
-        } else {
-            console.log("Data not available, open inside Telegram Web App.");
-        }
+    <script>
+            const tg = window.Telegram.WebApp; 
+            tg.ready();
 
 
-        items.forEach(item => {
-            item.addEventListener('click', () => {
-                items.forEach(i => i.classList.remove('active'));
-                item.classList.add('active');
+            if (tg.initDataUnsafe && tg.initDataUnsafe.user) { const user = tg.initDataUnsafe.user;
+                console.log("Full JSON:", JSON.stringify(tg.initDataUnsafe));
+                if (user.photo_url) { document.getElementById("profilImg").src = user.photo_url; }
+                const fullName = `${user.first_name || ""} ${user.last_name || ""}`.trim(); document.getElementById("name").textContent = fullName;
+
+            }
+            else { console.log("Data not available, open inside Telegram Web App."); }
+
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    items.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                });
             });
-        });
     </script>
 </body>
 
