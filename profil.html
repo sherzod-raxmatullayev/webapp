@@ -56,6 +56,7 @@
 
         if (tg.initDataUnsafe) {
             console.log("Full JSON:", JSON.stringify(tg.initDataUnsafe));
+            const user = tg.initDataUnsafe.user;
             const fullName = `${user.first_name || ""} ${user.last_name || ""}`.trim();
             document.getElementById("nameid").textContent = fullName;
         } else {
